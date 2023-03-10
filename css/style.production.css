@@ -40,7 +40,7 @@ a:active {  /* hover < active */
   color: #16FF00;
 }
 
-#a-social {  /*removing underlines*/
+#a-social, #b-social {  /*removing underlines*/
 text-decoration: none;
 }
 
