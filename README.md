@@ -1,2 +1,2 @@
 # My Portfolio 
-Learned HTML and CSS as I work on creating my very first and own responsive portfolio website from scratch
+Learned HTML and CSS as I work on creating my very first and own responsive portfolio website from scratch.
