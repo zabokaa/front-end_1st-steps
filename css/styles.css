@@ -1,0 +1,268 @@
+:root {
+	--primary-color: #b0c4de;
+	--secondary-color: #71266E;
+  --text-color: #255748;
+  --text-active: #05676e;
+  --text-neon: #16FF00;
+  --grid-color: #edcedf;
+  --font: 'Roboto Mono', monospace; 
+  --font-size-body: 16px;
+  --font-size-h1: 30px;
+  --font-size-h2: 24px;
+  --font-regular: 400;
+  --font-bold: 700;
+  --padding1: 10px;
+  --button-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  --button-radius: 3px;
+  --button-opacity: 0.8;
+  --header-width: 20px;
+  --header-padding: 20px;
+  --navi-margin-left: 15px;
+  --header-flex: 0 1 200px;
+  --logo-width: 200px;
+  --logo-height: 70px;
+  --contactform-padding: 13px;
+  --contactform-bottom: 5px;
+  --profil-pic: 250px;
+  --profil-margin: 40px;
+  --profil-box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+}
+    
+  body {
+      font-family: var(--font);
+      font-weight: var(--font-regular);
+      font-size: var(--font-size-body) ;
+      background-color: var(--primary-color);
+  }
+  
+  h1 {
+      font-family: var(--font);
+      font-weight: var(--font-bold);
+      font-size: var(--font-size-h1);
+  }
+  
+  h2 {
+      font-family: var(--font);
+      font-variant: small-caps;
+      font-weight: var(--font-bold);
+      font-size: var( --font-size-h2);
+      color: var(--text-color);
+  }
+  
+  a {
+      color: var(--secondary-color);
+  }
+  
+  a:visited { /* visted < hover */
+      color: var(--text-color);
+  }
+  
+  a:hover, a:focus {
+      /* no underlines while hovering over links */
+      text-decoration: none;
+    }
+  
+  a:active {  /* hover < active */
+      color: var(--text-active);
+  }
+  
+  #my-link {
+      color: var(--text-neon);
+  }
+  
+  #a-social {  /*removing underlines*/
+    text-decoration: none;
+  }
+  
+  button, .button {
+      border: none;
+      display: inline-block;
+      font-family: inherit;
+      background-color: var(--secondary-color);
+      color: var(--grid-color);
+      text-decoration: none;
+      padding: var(--padding1);
+      border-radius: var(--button-radius);
+      border-bottom: var(--button-bottom);
+      transition: 0.2s opacity;
+  }
+  
+  button:hover, button:focus, .button:hover, .button:focus {
+      cursor: grab;
+      opacity: var(--button-opacity);
+  }
+  
+  .button_secondary {
+      background-color: var(--text-color);
+      color: var(--grid-color);
+  }
+  
+  .profile-pic {
+      float: left;
+      width: var(--profil-pic);
+      height: auto; /*by default*/
+      border-radius: 50%; /*reshaping into circle */
+      margin-right: var(--profil-margin);
+      box-shadow: var(--profil-box-shadow);
+      transition: all ease-in-out .2s; /* transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];*/
+  }
+  
+  .profile {
+      max-width: 700px;
+      margin: 0 auto;  /*centering*/
+  }
+  
+  * {
+      box-sizing: border-box;
+  }
+  
+  .page-footer, .about-main, .contact-main {
+      clear: both;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /*to avoid stretching of e.g. buttom */
+      text-align: center; /* <img> are inline-block --> working with text-align */
+  } 
+  
+  .page-header {
+      display: flex;
+      width: 100%;
+      padding: var(--header-padding);
+      border-bottom: var(--text-active) dotted;
+  }
+  
+  .page-header__item {
+      width: var(--header-width);
+      flex: var(--header-flex);
+      flex-wrap: wrap;
+    }
+  
+  .page-header__item:last-child {
+      flex-grow: 1;
+      text-align: right;
+    }
+  .page-header_item {
+    width: var(--logo-width);
+    height: var(--logo-height);
+  }  
+
+  .navigation-list {
+      list-style-type: none;
+    }
+  
+  .navigation-list li {
+      display: inline-block;
+      margin-left: var(--navi-margin-left);
+    }
+  
+  .navigation-list__item--active {
+      text-decoration: none;
+      color: var(--text-color);
+    }
+  
+  .enjoy-list {
+      list-style-type: none;
+    }
+
+  /*Kontaktform auf contact.html */
+  .contact-form {
+    border: dotted var(--secondary-color);
+    background-color: transparent;
+    padding: var(--contactform-padding);
+    margin-bottom: var(--contactform-bottom);
+  }
+  /* starting grid fallback */
+  .grid_item {
+      display: inline-block;
+      width: 33%;
+     }
+  /* end of grid fallback */
+  
+  @supports (display: grid) {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* most famous css snippet :) */
+      grid-gap: 20px;  /* distance betw items rows and columns */
+      justify-content: space-evenly;
+    }
+    
+    .grid__item {
+      background-color: var(--grid-color);
+      width: auto;
+      min-height: auto;
+      margin: 0;
+    }
+  }
+  
+  @media all and (max-width: 750px) {
+      .grid {
+        grid-gap: 10px;
+      }
+      .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+      }
+      h1 {
+        font-size: 22px;
+      }
+  }
+  @media all and (max-width: 500px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+  }
+  @media all and (min-width: 500px) and (max-width: 750px){
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+  } 
+  
+  /* first animation example */
+  
+  @keyframes color-change {
+    0% {
+      fill: #edc655;
+    }
+    50% {
+      fill: #b46dae;
+    }
+    100% {
+      fill: #801c20;
+    }
+  }
+  
+  .sun {
+    animation-duration: 4s;
+    animation-name: color-change;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+  .sun {
+    animation: 4s color-change infinite alternate linear;
+  }
+  
+  /* moving cloud */
+  @keyframes cloud-move {
+    from {
+      transform: translate(0, 50px);
+    }
+    to {
+      transform: translate(200px, 50px);
+    }
+  }
+  .cloud-front {
+    animation: 15s cloud-move infinite alternate linear;
+  }
+  
+  @keyframes cloud-move-reverse {
+    from {
+      transform: translate(446px, 48px);
+    }
+    to {
+      transform: translate(100px, 48px);
+    }
+  }
+  .cloud-back {
+    animation: 22s cloud-move-reverse infinite alternate linear;
+  }

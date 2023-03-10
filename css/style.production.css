@@ -1,0 +1,266 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #b0c4de;
+}
+
+h1 {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+h2 {
+  font-family: 'Roboto Mono', monospace;
+  font-variant: small-caps;
+  font-weight: 700;
+  font-size: 24px;
+  color: #255748;
+}
+
+a {
+  color: #71266E;
+}
+
+a:visited { /* visted < hover */
+  color: #255748;
+}
+
+a:hover, a:focus {
+  /* no underlines while hovering over links */
+  text-decoration: none;
+}
+
+a:active {  /* hover < active */
+  color: #05676e;
+}
+
+#my-link {
+  color: #16FF00;
+}
+
+#a-social {  /*removing underlines*/
+text-decoration: none;
+}
+
+button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: #71266E;
+  color: #edcedf;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity;
+}
+
+.button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  background-color: #71266E;
+  color: #edcedf;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.2s opacity;
+}
+
+button:hover {
+  cursor: grab;
+  opacity: 0.8;
+}
+
+button:focus {
+  cursor: grab;
+  opacity: 0.8;
+}
+
+.button:hover {
+  cursor: grab;
+  opacity: 0.8;
+}
+
+.button:focus {
+  cursor: grab;
+  opacity: 0.8;
+}
+
+.button_secondary {
+  background-color: #255748;
+  color: #edcedf;
+}
+
+.profile-pic {
+  float: left;
+  width: 250px;
+  height: auto; /*by default*/
+  border-radius: 50%; /*reshaping into circle */
+  margin-right: 40px;
+  box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+  transition: all ease-in-out .2s; /* transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];*/
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;  /*centering*/
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-footer, .about-main, .contact-main {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /*to avoid stretching of e.g. buttom */
+  text-align: center; /* <img> are inline-block --> working with text-align */
+} 
+
+.page-header {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  border-bottom: #05676e dotted;
+}
+
+.page-header__item {
+  width: 20px;
+  flex: 0 1 200px;
+  flex-wrap: wrap;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  text-align: right;
+}
+.page-header_item {
+width: 200px;
+height: 70px;
+}  
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
+  color: #255748;
+}
+
+.enjoy-list {
+  list-style-type: none;
+}
+
+/*Kontaktform auf contact.html */
+.contact-form {
+border: dotted #71266E;
+background-color: transparent;
+padding: 13px;
+margin-bottom: 5px;
+}
+/* starting grid fallback */
+.grid_item {
+  display: inline-block;
+  width: 33%;
+ }
+/* end of grid fallback */
+
+@supports (display: grid) {
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* most famous css snippet :) */
+  grid-gap: 20px;  /* distance betw items rows and columns */
+  justify-content: space-evenly;
+}
+
+.grid__item {
+  background-color: #edcedf;
+  width: auto;
+  min-height: auto;
+  margin: 0;
+}
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+} 
+
+/* first animation example */
+
+@keyframes color-change {
+0% {
+  fill: #edc655;
+}
+50% {
+  fill: #b46dae;
+}
+100% {
+  fill: #801c20;
+}
+}
+
+.sun {
+animation-duration: 4s;
+animation-name: color-change;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-timing-function: linear;
+}
+.sun {
+animation: 4s color-change infinite alternate linear;
+}
+
+/* moving cloud */
+@keyframes cloud-move {
+from {
+  transform: translate(0, 50px);
+}
+to {
+  transform: translate(200px, 50px);
+}
+}
+.cloud-front {
+animation: 15s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+from {
+  transform: translate(446px, 48px);
+}
+to {
+  transform: translate(100px, 48px);
+}
+}
+.cloud-back {
+animation: 22s cloud-move-reverse infinite alternate linear;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="web developer, full stack, feminism">
+        <meta name="keyword" content="portfolio, developer, data scientist">
+        <link rel="icon" href="./img/favicon-32x32.png" type="image/png">
+        <title>Sabine Kuch - Portfolio</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;700&display=swap">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.production.css">
+    </head>
+
+    <body>
+        <header class="page-header">
+            <div>
+                 <!-- to do: create logo and insert here -->
+                <img class="page-header_item" src="img/SABA-1.png" alt="logo of sabine kuch, tba"> 
+            </div>
+
+            <nav class="main-navigation page-header__item">
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a class="navigation-list__item" href="index.html" role="menuitem">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a class="navigation-list__item" href= "about.html" role="menuitem">About</a>
+                    </li>
+                    <li role="presentation">
+                        <a class="navigation-list__item" href="work.html" role="menuitem">Work</a>
+                    </li>
+                    <li role="presentation">
+                        <a class="navigation-list__item navigation-list__item--active" href="contact.html" role="menuitem">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="contact-main">
+
+            <h1>Contact</h1>
+            <div>
+                Sabine Kuch<br>
+                Eine Str. 14<br>
+                10437 Berlin<br>
+                Germany<br>
+                <br>
+                Tel <a href="tel:+49123456789">+49 123456789</a><br>
+                Skype <a href="skype:hello.saba"> hello.saba</a><br>
+                <a href="mailto:sabine.kuch.1312@gmail.com">sabine.kuch.1312[at]gmail.com</a><br><br>
+                <a href="mailto:sabine.kuch.1312@gmail.com" id="my-link">Contact me</a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <form action="" method="post">
+                <label class="standard-label" for="contact-email" ></label>
+                <input class="contact-form" type="email" id="contact-email" required placeholder="e-mail"><br>
+
+                <label class="standard-label"></label>
+                <input class="contact-form" type="tel" placeholder="phone"><br>
+
+                <label class="standard-label"></label>
+                <textarea class="contact-form" maxlength="240" required placeholder="your message"></textarea>
+                <br>
+                <input class="button_secondary" type="submit" value="Send message">
+            </form>
+
+        </main>
+
+        <footer class="page-footer">
+            <p>Find me on</p>
+            <div class="social-media">
+                <a id="a-social" href="https://github.com/zabokaa" target="_blank">
+                    <img src="img/github_icon_2.svg" alt="github icon">
+                </a>
+                <a id="a-social" href="https://www.linkedin.com/in/data-scientist-sab-k/" target="_blank"
+                >
+                    <img src="img/linkedin_icon.svg" alt="linkedin icon">
+                </a>      
+                <img src="img/twitter_icon.svg" alt="twitter icon">
+            </div>
+        </footer>
+
+        <script src="js/tota11y.min.js"></script>   
+    </body>
+</html>
+
