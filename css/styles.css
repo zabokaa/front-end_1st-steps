@@ -92,7 +92,7 @@
       opacity: var(--button-opacity);
   }
   
-  .button_secondary {
+  .button-secondary {
       background-color: var(--text-color);
       color: var(--grid-color);
   }
@@ -116,13 +116,18 @@
       box-sizing: border-box;
   }
   
-  .page-footer, .about-main, .contact-main {
+  .page-footer, .about-main, .contact-main, .work-main {
       clear: both;
       display: flex;
       flex-direction: column;
       align-items: center; /*to avoid stretching of e.g. buttom */
       text-align: center; /* <img> are inline-block --> working with text-align */
   } 
+  
+  .work-main {
+    max-width: 840px;
+    margin:0 auto;
+  }
   
   .page-header {
       display: flex;
@@ -182,12 +187,14 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* most famous css snippet :) */
-      grid-gap: 20px;  /* distance betw items rows and columns */
+      grid-gap: 50px;  /* distance betw items rows and columns */
       justify-content: space-evenly;
+      grid-template-columns: auto auto auto;
     }
     
     .grid__item {
       background-color: var(--grid-color);
+      grid-template-columns: auto auto auto;
       width: auto;
       min-height: auto;
       margin: 0;

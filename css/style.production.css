@@ -90,7 +90,7 @@ button:focus {
   opacity: 0.8;
 }
 
-.button_secondary {
+.button-secondary {
   background-color: #255748;
   color: #edcedf;
 }
@@ -121,6 +121,11 @@ button:focus {
   align-items: center; /*to avoid stretching of e.g. buttom */
   text-align: center; /* <img> are inline-block --> working with text-align */
 } 
+
+.work-main {
+  max-width: 840px;
+	margin:0 auto;
+}
 
 .page-header {
   display: flex;
@@ -180,8 +185,9 @@ margin-bottom: 5px;
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* most famous css snippet :) */
-  grid-gap: 20px;  /* distance betw items rows and columns */
+  grid-gap: 50px;  /* distance betw items rows and columns */
   justify-content: space-evenly;
+  grid-template-columns: auto auto auto;
 }
 
 .grid__item {
