@@ -169,6 +169,10 @@
       list-style-type: none;
     }
 
+  .berlin-illustration {
+    height: 10vh;
+  }
+
   /*Kontaktform auf contact.html */
   .contact-form {
     border: dotted var(--secondary-color);
