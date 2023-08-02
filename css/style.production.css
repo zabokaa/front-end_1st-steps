@@ -108,6 +108,7 @@ button:focus {
 .profile {
   max-width: 700px;
   margin: 0 auto;  /*centering*/
+  padding-top: 150px;
 }
 
 * {
