@@ -123,11 +123,28 @@ button:focus {
   text-align: center; /* <img> are inline-block --> working with text-align */
 } 
 
+/* PROJECTS */
 .work-main {
   max-width: 840px;
 	margin:0 auto;
   padding-top: 50px;
 }
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.project-img {
+  width: 100%;
+  height: 40%;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
 
 .about-main {
   padding-top: 80px;
